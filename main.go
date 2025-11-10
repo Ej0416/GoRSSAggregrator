@@ -9,7 +9,6 @@ import (
 	"github.com/go-chi/chi/v5"
 	"github.com/go-chi/cors"
 	"github.com/joho/godotenv"
-	"github.com/Ej0416/GoRSSAggregrator/handlers"
 )
 
 func main() {
@@ -29,11 +28,6 @@ func main() {
 		AllowCredentials: false,
 		MaxAge: 300,
 	}))
-
-	v1Router := chi.NewRouter()
-	
-	v1Router.Get("/readiness", handlers.ReadinessHandler)
-
 
 	srv := &http.Server{
 		Handler: router,
