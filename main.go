@@ -32,7 +32,7 @@ func main() {
 
 	v1Router := chi.NewRouter()
 	
-	v1Router.Get("/readiness", handlers.ReadinessHandler)
+	v1Router.Get("/readiness", handlers.readinessHandler)
 
 
 	srv := &http.Server{
