@@ -2,8 +2,9 @@ package main
 
 import (
 	"net/http"
+	"github.com/GoRSSAggregrator/helper"
 )
 
-func readinessHandler(w http.ResponseWriter, r *http.Request) {
-	repondWithJSON(w,200,struct{}{})
+func ReadinessHandler(w http.ResponseWriter, r *http.Request) {
+	helper.RepondWithJSON(w,200,struct{}{})
 }

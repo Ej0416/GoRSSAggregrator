@@ -9,7 +9,7 @@ import (
 	"github.com/go-chi/chi/v5"
 	"github.com/go-chi/cors"
 	"github.com/joho/godotenv"
-	"github.com/Ej0416/GoRSSAggregratoror/handlers"
+	"github.com/Ej0416/GoRSSAggregrator/handlers"
 )
 
 func main() {
@@ -32,7 +32,7 @@ func main() {
 
 	v1Router := chi.NewRouter()
 	
-	v1Router.Get("/readiness", handlers.readinessHandler)
+	v1Router.Get("/readiness", handlers.ReadinessHandler)
 
 
 	srv := &http.Server{
